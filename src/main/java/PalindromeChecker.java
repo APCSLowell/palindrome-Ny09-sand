@@ -38,12 +38,15 @@ public void tester()
 public boolean palindrome(String word)
 {
   //your code here
-  return false;
+   return (word.equals(reverse(word))); 
 }
 public String reverse(String str)
 {
-    String sNew = new String();
-    //your code here
-    return sNew;
+     String s = new String("");
+    if (str.length()==0) {return "";} 
+    for ( int i = str.length()-1; i >= 0 ; i --){
+      s+=str.substring(i,i+1); 
+    }
+    return s;
 }
 }
