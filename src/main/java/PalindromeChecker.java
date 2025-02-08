@@ -38,7 +38,7 @@ public boolean palindrome(String word)
 {
   String no_space= "" ; 
   for ( int i =  0 ; i < word.length();i ++){
-    if (!word.substring(i,i+1).equals(" " )){
+    if (!word.substring(i,i+1).equals(" " ) && Character.isLetter(word.charAt(i))==true ){
         no_space+=word.substring(i,i+1); 
     }
   } 
