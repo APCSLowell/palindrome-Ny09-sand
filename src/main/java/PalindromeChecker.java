@@ -36,13 +36,13 @@ public void tester()
 }
 public boolean palindrome(String word)
 {
-  String no_space= " " ; 
-  for ( int i =  0 ; i < word.length()-1;i ++){
+  String no_space= "" ; 
+  for ( int i =  0 ; i < word.length();i ++){
     if (!word.substring(i,i+1).equals(" " )){
         no_space+=word.substring(i,i+1); 
     }
   } 
-  return (no_space.equals(reverse(word))); 
+  return no_space.equals(reverse(no_space));
 }
 public String reverse(String str)
 {
