@@ -32,19 +32,16 @@ public boolean palindrome(String word)
 {
   //your code here
    return (word.equals(reverse(word))); 
-  return (word.equals(reverse(word))); 
 }
 public String reverse(String str)
 {
      String s = new String("");
-    String s = new String("");
     if (str.length()==0) {return "";} 
     for ( int i = str.length()-1; i >= 0 ; i --){
-      s+=str.substring(i,i+1); 
-      if (str.substring(i,i+1).equals(" ")){
-        s+=" " ; 
+      if (!str.substring(i,i+1).equals(" " )){
+        s+=str.substring(i,i+1); 
       } 
-    }
-    return s;
+      } 
+      return s;
 }
 }
