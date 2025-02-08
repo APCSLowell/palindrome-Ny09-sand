@@ -3,7 +3,6 @@ import java.io.FileNotFoundException;  // Import this class to handle errors
 import java.util.Scanner; // Import the Scanner class to read text files
 public class PalindromeChecker {
 public void tester()
-public void setup()
 {
   //String lines[] = loadStrings("palindromes.txt");
   String[] lines = new String[6]; 
@@ -22,16 +21,22 @@ public void setup()
         System.out.println("An error occurred.");
         e.printStackTrace();
     }
-  String lines[] = loadStrings("palindromes.txt");
   System.out.println("there are " + lines.length + " lines");
   for (int i=0; i < lines.length; i++) 
   {
-@@ -37,16 +16,18 @@ public void tester()
+    if(palindrome(lines[i])==true)
+    {
+      System.out.println(lines[i] + " IS a palindrome.");
+    }
+    else
+    {
+      System.out.println(lines[i] + " is NOT a palindrome.");
+    }
+  }
 }
 public boolean palindrome(String word)
 {
-  //your code here
-   String no_space= " " ; 
+  String no_space= " " ; 
   for ( int i =  0 ; i < word.length()-1;i ++){
     if (!word.substring(i,i+1).equals(" " )){
         no_space+=word.substring(i,i+1); 
@@ -41,7 +46,7 @@ public boolean palindrome(String word)
 }
 public String reverse(String str)
 {
-     String s = new String("");
+   String s = new String("");
     if (str.length()==0) {return "";} 
     for ( int i = str.length()-1; i >= 0 ; i --){
       if (!str.substring(i,i+1).equals(" " )){
