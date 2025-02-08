@@ -31,7 +31,13 @@ public void setup()
 public boolean palindrome(String word)
 {
   //your code here
-   return (word.equals(reverse(word))); 
+   String no_space= " " ; 
+  for ( int i =  0 ; i < word.length()-1;i ++){
+    if (!word.substring(i,i+1).equals(" " )){
+        no_space+=word.substring(i,i+1); 
+    }
+  } 
+  return (no_space.equals(reverse(word))); 
 }
 public String reverse(String str)
 {
