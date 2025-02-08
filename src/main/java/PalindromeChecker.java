@@ -37,12 +37,13 @@ public void tester()
 public boolean palindrome(String word)
 {
   String no_space= "" ; 
+  word.toLowerCase();
   for ( int i =  0 ; i < word.length();i ++){
     if (!word.substring(i,i+1).equals(" " )){
         no_space+=word.substring(i,i+1); 
     }
   } 
-  no_space.toLowerCase(); 
+
   return no_space.equals(reverse(no_space));
 }
 public String reverse(String str)
