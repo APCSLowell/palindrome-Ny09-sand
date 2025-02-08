@@ -42,6 +42,7 @@ public boolean palindrome(String word)
         no_space+=word.substring(i,i+1); 
     }
   } 
+  no_space.toLowerCase(); 
   return no_space.equals(reverse(no_space));
 }
 public String reverse(String str)
